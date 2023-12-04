@@ -1,5 +1,7 @@
 import React, { useCallback, useState } from 'react'
-import {FaBars, FaTimes} from 'react-icons/fa'
+import {FaBars, FaTimes, FaGithub, FaLinkedin, FaGitlab} from 'react-icons/fa'
+import {HiOutlineMail} from "react-icons/hi"
+import { BsFillPersonLinesFill } from 'react-icons/bs';
 
 const Navbar = () => {
 
@@ -12,19 +14,19 @@ const Navbar = () => {
     },
     {
       id:2,
-      link:'about',
-    },
-    {
-      id:3,
       link:'projects',
     },
     {
-      id:4,
+      id:3,
       link:'experience',
     },
     {
-      id:5,
+      id:4,
       link:'contact',
+    },
+    {
+      id:5,
+      link:'about',
     },
   ];
 
@@ -34,15 +36,54 @@ const Navbar = () => {
       <div>
           <h1 className='text-5xl font-signature ml-2 '>Isaac</h1>
       </div>
-      <ul className='hidden md:flex'>  {/* the screen has to be bigger than 768px for menu to show on top in the flex format(each link next to each other)*/}
-        {links.map(({id,link}) => (
-        <li
-          key={id}
-          className='px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200'>
-          {link}
-        </li>
+      <ul className='hidden md:flex'>{/* the screen has to be bigger than 768px for menu to show on top in the flex format(each link next to each other)*/}
+        {links.map(({ id, link }) => (
+          <li
+            key={id}
+            className='px-4 cursor-pointer capitalize font-medium'>
+            {id === 5 ? (
+              // Special case for "about" link in desktop view
+              <ul className="flex justify-between items-center icons">
+                <li className='flex justify-between items-center px-2  text-white hover:scale-105 duration-300 hover:text-blue-500'>
+                  <a href="https://www.linkedin.com/in/olivares-isaac/"
+                    className='flex justify-between items-center px-2'
+                  >
+                    <>
+                    <FaLinkedin size={30}/>
+                    </>
+                  </a>
+                </li>
+                <li className='flex justify-between items-center px-2  text-white hover:scale-105 duration-300 hover:text-blue-500'>
+                  <a href="https://github.com/isaac9031"
+                    className='flex justify-between items-center w-full'
+                  >
+                    <>
+                    <FaGithub size={30}/>
+                    </>
+                  </a>
+                </li>
+                <li className='flex justify-between items-center px-2  text-white hover:scale-105 duration-300 hover:text-blue-500'>
+                  <a href="https://gitlab.com/olivareshernandezisaac"
+
+                    className='flex justify-between items-center w-full'
+                  >
+                    <>
+                    <FaGitlab size={30}/>
+                    </>
+                  </a>
+                </li>
+              </ul>
+            ) : (
+              // Normal link rendering for other links
+              <a
+                className='hover:text-white  text-gray-500 '>
+                {link}
+              </a>
+            )}
+          </li>
         ))}
       </ul>
+
       {/* Mobile Menu Toggle (Burger Icon) */}
       <div onClick={() => setNav(!nav)} className='cursor-pointer pr-4 z-10 text-gray-500 md:hidden' > {/* Adding mobile version...burger icon. z-10 will be used to maintain the burger on top when mobile version is active*/}
           {nav ? <FaTimes size={30}/> : <FaBars size={30}/>}
@@ -54,7 +95,45 @@ const Navbar = () => {
           <li
             key={id}
             className='px-4 cursor-pointer capitalize py-6 text-4xl'>
-            {link}
+            {id === 5 ? (
+              // Special case for "about" link in desktop view
+              <ul className="flex justify-between items-center icons">
+                <li className='flex justify-between items-center px-2 hover:scale-107 duration-200'>
+                  <a href="https://www.linkedin.com/in/olivares-isaac/"
+                    className='flex justify-between items-center px-2 text-white'
+                  >
+                    <>
+                    <FaLinkedin size={30}/>
+                    </>
+                  </a>
+                </li>
+                <li className='flex justify-between items-center px-2 hover:scale-105 duration-200'>
+                  <a href="https://github.com/isaac9031"
+                    className='flex justify-between items-center w-full text-white'
+                  >
+                    <>
+                    <FaGithub size={30}/>
+                    </>
+                  </a>
+                </li>
+                <li className='flex justify-between items-center px-2 hover:scale-105 duration-200'>
+                  <a href="https://gitlab.com/olivareshernandezisaac"
+
+                    className='flex justify-between items-center w-full text-white'
+                  >
+                    <>
+                    <FaGitlab size={30}/>
+                    </>
+                  </a>
+                </li>
+              </ul>
+            ) : (
+              // Normal link rendering for other links
+              <a
+                className='hover:text-gray-300'>
+                {link}
+              </a>
+            )}
           </li>
         ))}
         </ul>

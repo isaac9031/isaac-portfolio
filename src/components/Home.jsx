@@ -8,11 +8,11 @@ const Home = () => {  //Home will be behind the NavBar, so you need to comment i
         <div className='max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row'>{/*flex-col and justify-center: on smaller screens, the children will be aligned vertically (stacked on top of each other). When the screen size reaches the medium breakpoint (md:flex-row), the layout will switch to a row direction, and the children will be aligned horizontally.  */}
             <div className='flex flex-col pt-8 justify-center h-full'> {/*flex flex-column means that the children of this div will always be vertically stacked since we don't have md:flex-row class; cross axis was changed 90 degrees by the parent div from row direction ↕ to column dirction ↔, therefore justify and item center has also rotated 90 degrees */}
                 <h2 className="text-4xl sm:text-7xl font-bold text-purple-500">
-                   I'm a Full Stack Software Engineer
+                   I'm Isaac
                 </h2>
                 <p className='text-white pt-4 px-2 max-w-none'> {/*might need to modify max-w-none */}
-                As a passionate software engineer with a background in education, I found my new passion during the pandemic when I witnessed the profound impact of technology on education.
-                My blend of teaching expertise and technical skills empowers me to work within cross-functional teams. Committed to continuous growth, I thrive in the ever-evolving world of software engineering
+                I am a Full Stack Software Engineer and a former educator who found a new passion during the pandemic where I witnessed the profound impact of technology in education.
+                My love for building and designing new applications can be seen in my recent projects. I am always looking to learn new skills, to collaborate, and to connect. 
                 </p>
 
                 <div>
