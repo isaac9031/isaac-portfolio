@@ -12,7 +12,7 @@ const Home = () => {  //Home will be behind the NavBar, so you need to comment i
                 </h2>
                 <p className='text-white pt-4 px-2 max-w-none'> {/*might need to modify max-w-none */}
                 I am a Full Stack Software Engineer and a former educator who found a new passion during the pandemic where I witnessed the profound impact of technology in education.
-                My love for building and designing new applications can be seen in my recent projects. I am always looking to learn new skills, to collaborate, and to connect. 
+                My love for building and designing new applications can be seen in my recent projects. I am always looking to learn new skills, to collaborate, and to connect. Please don't hesitate to contact me!
                 </p>
 
                 <div>

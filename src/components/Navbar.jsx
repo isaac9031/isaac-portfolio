@@ -26,7 +26,7 @@ const Navbar = () => {
     },
     {
       id:5,
-      link:'about',
+      link:'socials',
     },
   ];
 
@@ -42,7 +42,7 @@ const Navbar = () => {
             key={id}
             className='px-4 cursor-pointer capitalize font-medium'>
             {id === 5 ? (
-              // Special case for "about" link in desktop view
+              // Special case for "socials" link in desktop view
               <ul className="flex justify-between items-center icons">
                 <li className='flex justify-between items-center px-2  text-white hover:scale-105 duration-300 hover:text-blue-500'>
                   <a href="https://www.linkedin.com/in/olivares-isaac/"
