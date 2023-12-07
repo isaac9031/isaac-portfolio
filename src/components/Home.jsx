@@ -24,11 +24,11 @@ const Home = () => {  //Home will be behind the NavBar, so you need to comment i
                     </button>
                 </div>
             </div>{/* */}
-            <div  >{/*className='overflow-hidden' */}
+            <div className='py-4'  >{/*className='overflow-hidden' */}
                 <img
                 src={SelfImage}
                 alt='profile'
-                className='rounded-2xl mx-auto w-2/3  md:w-full' //screen will be full once it reaches 768px, if mobile then it will be smaller
+                className='rounded-2xl object-scale-down  mx-auto w-2/3  md:w-full' //screen will be full once it reaches 768px, if mobile then it will be smaller
                 />
             </div>
         </div>
