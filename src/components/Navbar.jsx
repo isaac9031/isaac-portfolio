@@ -31,10 +31,10 @@ const Navbar = () => {
   ];
 
   return (
-    <div className='flex justify-between items-center w-full h-15 py-4 text-white bg-black fixed px-4'>
+    <div className='flex  justify-between items-center fixed w-full h-20 text-white bg-black px-4  '> {/*added top-0 on 12/06**/}
           {/* Desktop Logo and Menu */}
       <div>
-          <h1 className='text-5xl font-signature ml-2 '>Isaac</h1>
+          <h1 className='text-4xl font-signature ml-2 '>Isaac</h1>
       </div>
       <ul className='hidden md:flex'>{/* the screen has to be bigger than 768px for menu to show on top in the flex format(each link next to each other)*/}
         {links.map(({ id, link }) => (
@@ -90,7 +90,7 @@ const Navbar = () => {
       </div>
           {/* Mobile Menu (Conditional Rendering). {nav && ()} it will render the code inside if this is nav is true*/}
       {nav && (
-        <ul className='flex flex-col justify-center items-center absolute top-0 left-0 w-full h-fit  bg-gradient-to-b from-black to-blue-800 text-gray-500'> {/* Adding mobile version's list*/}
+        <ul className='flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen  bg-gradient-to-b from-black to-blue-800 text-gray-500 '> {/* Adding mobile version's list*/}
         {links.map(({id,link}) => (
           <li
             key={id}
