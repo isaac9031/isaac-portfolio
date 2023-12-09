@@ -31,7 +31,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className='flex  justify-between items-center fixed w-full h-20 text-white bg-black px-4  '> {/*added top-0 on 12/06**/}
+    <div className='flex  justify-between items-center fixed w-full h-20 text-white bg-black px-4  '> {/*changed to h-20 instead of h-15**/}
           {/* Desktop Logo and Menu */}
       <div>
           <h1 className='text-4xl font-signature ml-2 '>Isaac</h1>
@@ -85,7 +85,7 @@ const Navbar = () => {
       </ul>
 
       {/* Mobile Menu Toggle (Burger Icon) */}
-      <div onClick={() => setNav(!nav)} className='cursor-pointer pr-4 z-10 text-gray-500 md:hidden' > {/* Adding mobile version...burger icon. z-10 will be used to maintain the burger on top when mobile version is active*/}
+      <div onClick={() => setNav(!nav)} className='cursor-pointer pr-4 z-10 text-gray-500 md:hidden' > {/* Adding mobile version...burger icon. z-10 will be used to maintain the burger on top when mobile version is active, the x doesn't appear if z-10 is deleted*/}
           {nav ? <FaTimes size={30}/> : <FaBars size={30}/>}
       </div>
           {/* Mobile Menu (Conditional Rendering). {nav && ()} it will render the code inside if this is nav is true*/}
