@@ -4,7 +4,7 @@ const Resume = () => {
   return (
     <div
         name='resume'
-        className='w-full h-screen bg-gradient-to-b from-black to-blue-800 text-white'
+        className='h-fit w-full md:h-screen bg-gradient-to-b from-black to-blue-800 text-white'
     >
         <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center h-full w-full'>
             <div className='pb-8'>

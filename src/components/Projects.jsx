@@ -27,7 +27,7 @@ const Projects = () => {
     ]
 
   return (
-    <div name = 'projects' className='w-full md:h-screen text-white bg-gradient-to-b from-black to-blue-800'>
+    <div name = 'projects' className='h-fit w-full md:h-screen text-white bg-gradient-to-b from-black to-blue-800'>
         <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full'>
             <div className='pb-12'>
                 <p className='text-3xl font-bold inline border-b-4 border-gray-500'> Projects</p>
@@ -38,7 +38,7 @@ const Projects = () => {
                 <div key={id} className='shadow-md shadow-gray-600 rounded-lg ' > {/*each individual card */}
                     <img src= {src}
                          alt=''
-                         className='rounded-md duration-300 hover:scale-105'
+                         className='h-52 w-full object-cover object-top rounded-md duration-300 hover:scale-105'
                          />{/*duration is for the hover to make it smoother, rounded-md to make image corners round */}
                     <div className='flex item-center justify-center'>
                         <button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-110'>Demo</button>
