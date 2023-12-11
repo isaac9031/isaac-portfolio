@@ -5,7 +5,6 @@ import Double_i_auto from '../assets/portfolio/Double_i_auto.png'
 import Volundeerly from '../assets/portfolio/Volundeerly.png'
 
 
-
 const Projects = () => {
     const projects = [
         {
@@ -27,7 +26,7 @@ const Projects = () => {
     ]
 
   return (
-    <div name = 'projects' className='h-fit w-full md:h-screen text-white bg-gradient-to-b from-black to-blue-800'>
+    <div name = 'projects' className='h-fit w-full  text-white bg-gradient-to-b from-black to-blue-800 pt-20'>
         <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full'>
             <div className='pb-12'>
                 <p className='text-3xl font-bold inline border-b-4 border-gray-500'> Projects</p>
@@ -45,8 +44,6 @@ const Projects = () => {
                         <button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-110'>Code</button>
                     </div>
                 </div>))}
-
-
             </div>
         </div>
     </div>
