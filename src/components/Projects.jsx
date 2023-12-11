@@ -6,7 +6,7 @@ import Volundeerly from '../assets/portfolio/Volundeerly.png'
 
 
 const Projects = () => {
-    const projects = [
+    const projects_list = [
         {
             id:1,
             src: Volundeerly
@@ -26,14 +26,14 @@ const Projects = () => {
     ]
 
   return (
-    <div name = 'projects' className='h-fit w-full  text-white bg-gradient-to-b from-black to-blue-800 pt-20'>
+    <div name = 'projects' className='h-fit w-full  text-white bg-gradient-to-b from-black  to-blue-800 py-20'>
         <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full'>
             <div className='pb-12'>
-                <p className='text-3xl font-bold inline border-b-4 border-gray-500'> Projects</p>
+                <p className='text-3xl font-bold inline border-b-4 border-gray-500 p-2'> Projects</p>
             </div>
 
             <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0'>{/*This will be the grid for the cards */}
-                {projects.map(({id, src}) => (
+                {projects_list.map(({id, src}) => (
                 <div key={id} className='shadow-md shadow-gray-600 rounded-lg ' > {/*each individual card */}
                     <img src= {src}
                          alt=''
