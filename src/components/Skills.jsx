@@ -117,14 +117,14 @@ const Skills = () => {
             <div className='pb-12'>
                 <p className='text-3xl font-extra inline border-b-4 border-gray-500 p-2'>Skills</p>
             </div>
-            <div className='w-full grid grid-cols-2 sm:grid-cols-3 gap-8 px-12 sm:px-0 text-center py-8 '>
+            <div className='w-full grid grid-cols-2 sm:grid-cols-4 gap-8 px-12 sm:px-0 text-center py-8 '>
                 {
                     skills_list.map(({id, src, title, style}) => (
                         <div key={id}
                             className={`py-2 shadow-md font-bold rounded-lg hover:scale-105 duration-500 ${style}`}>
                             <img src= {src}
                                 alt = ''
-                                className='w-20 mx-auto py-6'
+                                className='w-16 mx-auto py-6'
                             />
                             <p className='mt-4'>{title}</p>
                         </div> ))

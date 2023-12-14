@@ -12,7 +12,7 @@ const Contact = () => {
                       method="POST"
                       className='flex flex-col w-full md:w-1/2 gap-6'>
                     <div className='flex flex-col'>
-                        <span class="text-white font-bold mb-2">Name:</span>
+                        <span className="text-white font-bold mb-2">Name:</span>
                         <input
                             type="text"
                             name="name"
@@ -21,7 +21,7 @@ const Contact = () => {
                         />
                     </div>
                     <div className='flex flex-col'>
-                        <span class="text-white font-bold mb-2">Email:</span>
+                        <span className="text-white font-bold mb-2">Email:</span>
                         <input
                             type="text"
                             name="email"
@@ -30,7 +30,7 @@ const Contact = () => {
                         />
                     </div>
                     <div className='flex flex-col'>
-                        <span class="text-white font-bold mb-2">Message:</span>
+                        <span className="text-white font-bold mb-2">Message:</span>
                         <textarea
                             name="message"
                             className='p-2 bg-transparent border-2 rounded-md text-white focus:outline-none'
