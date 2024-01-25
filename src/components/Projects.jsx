@@ -9,19 +9,23 @@ const Projects = () => {
     const projects_list = [
         {
             id:1,
-            src: Volundeerly
+            src: Volundeerly,
+            href: "https://gitlab.com/volundeerly/module3-project-gamma",
         },
         {
             id:2,
-            src: Double_i_auto
+            src: Double_i_auto,
+            href: "https://gitlab.com/olivareshernandezisaac/project-beta",
         },
         {
             id:3,
-            src: Conference
+            src: Conference,
+            href: "https://gitlab.com/olivareshernandezisaac/fearless-frontend",
         },
         {
             id:4,
-            src: Closet_Organizer
+            src: Closet_Organizer,
+            href: "https://gitlab.com/SheercoldZL/microservice-two-shot",
         },
     ]
 
@@ -32,16 +36,20 @@ const Projects = () => {
                 <p className='text-3xl font-bold inline border-b-4 border-gray-500 p-2'> Projects</p>
             </div>
 
-            <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0'>{/*This will be the grid for the cards */}
-                {projects_list.map(({id, src}) => (
-                <div key={id} className='shadow-md shadow-gray-600 rounded-lg ' > {/*each individual card */}
+            <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0 '>{/*This will be the grid for the cards */}
+                {projects_list.map(({id, src, href}) => (
+                <div key={id} className='shadow-md shadow-gray-600 rounded-lg' > {/*each individual card */}
                     <img src= {src}
                          alt=''
                          className='h-52 w-full object-cover object-top rounded-md duration-300 hover:scale-105'
                          />{/*duration is for the hover to make it smoother, rounded-md to make image corners round */}
                     <div className='flex item-center justify-center'>
-                        <button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-110'>Demo</button>
-                        <button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-110'>Code</button>
+                        {/* <a href= {href}>
+                            <button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-110'>Demo</button>
+                        </a> */}
+                        <a href= {href}>
+                            <button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-110'>Code</button>
+                        </a>
                     </div>
                 </div>))}
             </div>

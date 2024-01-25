@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from 'react'
 import {FaBars, FaTimes, FaGithub, FaLinkedin, FaGitlab} from 'react-icons/fa'
-import {HiOutlineMail} from "react-icons/hi"
+import {MdDownload} from "react-icons/md"
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 
 const Navbar = () => {
@@ -18,7 +18,7 @@ const Navbar = () => {
     },
     {
       id:3,
-      link:'experience',
+      link:'Skills',
     },
     {
       id:4,
@@ -27,6 +27,13 @@ const Navbar = () => {
     {
       id:5,
       link:'socials',
+    },
+    {
+      id:6,
+      link:'Download CV',
+      style: "font-bold border-2 border-green-600",
+      download: true,
+      href: "/isaac_resume.pdf",
     },
   ];
 
@@ -37,10 +44,10 @@ const Navbar = () => {
           <h1 className='text-4xl font-signature ml-2 '>Isaac</h1>
       </div>
       <ul className='hidden md:flex'>{/* the screen has to be bigger than 768px for menu to show on top in the flex format(each link next to each other)*/}
-        {links.map(({ id, link }) => (
+        {links.map(({ id, link, style, download, href }) => (
           <li
             key={id}
-            className='px-4 cursor-pointer capitalize font-medium'>
+            className={`px-4 cursor-pointer capitalize font-medium ${style}`}>
             {id === 5 ? (
               // Special case for "socials" link in desktop view
               <ul className="flex justify-between items-center icons">
@@ -76,7 +83,10 @@ const Navbar = () => {
             ) : (
               // Normal link rendering for other links
               <a
-                className='hover:text-white  text-gray-500 '>
+                className='hover:text-white  text-gray-500 '
+                href = {href}
+                download={download}
+                >
                 {link}
               </a>
             )}
@@ -91,10 +101,10 @@ const Navbar = () => {
           {/* Mobile Menu (Conditional Rendering). {nav && ()} it will render the code inside if this is nav is true*/}
       {nav && (
         <ul className='flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen  bg-gradient-to-b from-black to-blue-800 text-gray-500 '> {/* Adding mobile version's list*/}
-        {links.map(({id,link}) => (
+        {links.map(({id,link, style, download, href }) => (
           <li
             key={id}
-            className='px-4 cursor-pointer capitalize py-6 text-4xl'>
+            className={`px-4 cursor-pointer capitalize py-6 text-4xl ${style}`}>
             {id === 5 ? (
               // Special case for "about" link in desktop view
               <ul className="flex justify-between items-center icons">
@@ -130,7 +140,10 @@ const Navbar = () => {
             ) : (
               // Normal link rendering for other links
               <a
-                className='hover:text-gray-300'>
+                className='hover:text-gray-300'
+                href = {href}
+                download={download}
+                >
                 {link}
               </a>
             )}

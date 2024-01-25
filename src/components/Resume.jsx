@@ -1,39 +1,42 @@
-import React from 'react'
-import { useState } from 'react';
-import { Document, Page } from 'react-pdf';
-import cv from '../assets/isaac_resume.pdf';
+// import React from 'react'
+// import { useState } from 'react';
+// import { Document, Page } from 'react-pdf';
+// import cv from '../assets/isaac_resume.pdf';
 
-const Resume = () => {
+// const Resume = () => {
 
-    const [numPages, setNumPages] = useState();
-    const [pageNumber, setPageNumber] = useState(1);
+//     const screenWidth = window.innerWidth;
 
-    function onDocumentLoadSuccess({ numPages}) {
-      setNumPages(numPages);
-    }
+//     const [numPages, setNumPages] = useState();
+//     const [pageNumber, setPageNumber] = useState(1);
 
-  return (
-    <div
-        name='resume'
-        className='h-fit w-full bg-gradient-to-b from-black to-blue-800 text-white py-20'
-    >
-        <div className='max-w-screen-lg mx-auto  h-full px-4 md:flex-row'>
-            <div className='flex flex-row pt-8  h-full'>
-                <div className='pb-8'>
-                    <p className='text-4xl font-bold inline border-b-4 border-gray-50'>Resume</p>
-                </div>
-                <div>
-                    <Document file={cv} onLoadSuccess={onDocumentLoadSuccess}>
-                        <Page pageNumber={pageNumber} renderTextLayer={false} renderAnnotationLayer={false} />
-                    </Document>
-                    {/* <p>
-                        Page {pageNumber} of {numPages}
-                    </p> */}
-                </div>
-            </div>
-        </div>
-    </div>
-  )
-}
+//     function onDocumentLoadSuccess({ numPages}) {
+//       setNumPages(numPages);
+//     }
 
-export default Resume
+//   return (
+//     <div
+//         name='resume'
+//         className='h-fit w-full bg-gradient-to-b from-black to-blue-800 text-white py-20'
+//     >
+//         <div className='max-w-screen-lg mx-auto flex flex-col justify-center h-full p-4'>
+//             <div className='pb-12'>
+//                 <p className='text-3xl sm:text-5xl font-bold text-purple-500'>Resume</p>
+//             </div>
+//             <div className='max-w-full overflow-hidden p-4 sm:p-10'>
+//                 <Document file={cv}
+//                     onLoadSuccess={onDocumentLoadSuccess}
+//                     className= "object-contain w-full max-w-screen-sm "
+//                     >
+//                     <Page pageNumber={pageNumber} renderTextLayer={false} renderAnnotationLayer={false} />
+//                 </Document>
+//                 {/* <p>
+//                     Page {pageNumber} of {numPages}
+//                 </p> */}
+//             </div>
+//         </div>
+//     </div>
+//   )
+// }
+
+// export default Resume
